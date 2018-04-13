@@ -49,7 +49,30 @@ A*C
 # array([[10, 40],
 #        [30, 80]])
 
-
+# # # GET ITEM # # #
+X = np.array([[51, 5], [14, 19], [0, 4]])
+print(X)
+# array([[51,  5],
+#        [14, 19],
+#        [ 0,  4]])
+print(X[0])
+# array([51,  5])
+print(X[0][1])
+# 5
+for r in X:
+    print(r)
+# [51  5]
+# [14 19]
+# [0 4]
+X = X.flatten()
+print(X)
+# array([51,  5, 14, 19,  0,  4])
+print(X[np.array([0, 2, 4])])
+# [51 14  0]
+print(X > 15)
+# [ True False False  True False False]
+print(X[X > 15])
+# array([51, 19])
 
 
 
